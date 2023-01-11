@@ -1,0 +1,38 @@
+@use '../variables'
+
+.nav-container
+    position: fixed
+    height: 64px
+    width: 100%
+    display: flex
+    justify-content: space-between
+    font-size: 1.25rem
+    font-weight: 400
+    padding: 0 5rem
+    letter-spacing: 0.8px
+    transition: 0.3s ease-in-out
+    z-index: 999
+
+    ul
+        display: flex
+        align-items: center
+        gap: 3rem
+
+    img
+        height: 100%
+
+.scrolled
+    background-color: #121212
+
+.navbar
+    color: variables.$text-color-secondary
+
+    &:hover
+        color: variables.$text-color
+
+@media ( max-width: 900px )
+    .logo
+        display: none
+    .nav-container
+        justify-content: center
+        padding: 0
