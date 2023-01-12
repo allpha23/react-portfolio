@@ -25,7 +25,7 @@ function NavBar() {
   };
 
   return (
-    <nav className={scrolled ? 'scrolled nav-container}' : 'nav-container'}>
+    <nav className={scrolled ? 'nav-container scrolled ' : 'nav-container'}>
       <div className="logo">
         <img src={logo} alt="" />
       </div>
