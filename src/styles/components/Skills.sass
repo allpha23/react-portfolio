@@ -1,0 +1,55 @@
+@use '../variables'
+
+#skills
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: variables.$bg-color
+    padding: 0 5rem
+    position: relative
+
+.skills-container
+    width: 100%
+    background: variables.$bg-color-secondary
+    border-radius: 2rem
+    padding: 3.5rem 2.5rem
+    margin-top: -2.5rem
+    margin-bottom: 3rem
+    text-align: center
+    z-index: 2
+
+    h2
+        font-size: 3rem
+        font-weight: 700
+
+    p
+        color: variables.$text-color-secondary
+        font-size: 1.2rem
+        letter-spacing: 0.8px
+        line-height: 1.5em
+        margin-top: 1rem
+        margin-bottom: 4.5rem
+
+.item
+    display: flex
+    align-items: center
+    flex-direction: column
+    font-size: 5rem
+
+    h5
+        margin-top: 1rem
+        font-size: 1rem
+
+.backgroundImg
+    position: absolute
+    top: 25%
+    left: 0
+    bottom: 0
+    width: 50%
+    z-index: 1
+    overflow: hidden
+
+@media ( max-width: 950px )
+    #skills
+        padding: 0
