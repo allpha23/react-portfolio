@@ -1,0 +1,142 @@
+@use '../variables'
+
+#home
+    background-image: url("/src/assets/img/banner-bg.png")
+    height: 100vh
+    width: 100%
+    display: grid
+    grid-template-columns: 1fr 1fr
+    padding: 6.5rem 5rem 4rem 5rem
+
+    h1
+        font-weight: 700
+        font-size: 4rem
+        letter-spacing: 0.8px
+        line-height: 1
+        margin-bottom: 1.25rem
+        display: block
+
+    h2
+        font-weight: 700
+        font-size: 2rem
+        letter-spacing: 0.8px
+
+    p
+        margin: 1.25rem 0
+        color: variables.$text-color-secondary
+        font-size: 1.25rem
+        letter-spacing: 0.8px
+        line-height: 1.5em
+
+.tag-line
+    font-weight: 700
+    font-size: 1.25rem
+    letter-spacing: 0.8px
+    padding: 0.5rem 0.7rem
+    background: variables.$gradient
+    border: 1px solid rgba(255, 255, 255, 0.5)
+    margin-bottom: 1rem
+    display: inline-block
+
+.social
+    a
+        width: 2.5rem
+        height: 2.5rem
+        background: rgba(217, 217, 217, 0.1)
+        display: inline-flex
+        border-radius: 50%
+        margin-right: 0.7rem
+        align-items: center
+        justify-content: center
+        line-height: 1
+        border: 1px solid rgba(255, 255, 255, 0.5)
+
+        img
+            height: 100%
+            width: 50%
+            z-index: 1
+            transition: 0.3s ease-in-out
+
+        &::before
+            content: ""
+            width: 2.5rem
+            height: 2.5rem
+            position: absolute
+            background-color: #ffffff
+            border-radius: 50%
+            transform: scale(0)
+            transition: 0.3s ease-in-out
+
+        &:hover
+            img
+                filter: variables.$filter-color-black
+
+        &:hover::before
+            transform: scale(1)
+
+.right
+    display: flex
+    justify-content: center
+
+    img
+        width: 24rem
+        animation: updown 3s linear infinite
+
+@keyframes updown
+    0%
+        transform: translateY(-20px)
+
+    50%
+        transform: translateY(20px)
+
+    100%
+        transform: translateY(-20px)
+
+@media ( max-width: 950px )
+    #home
+        display: flex
+        padding: 5rem 2rem 4rem 2rem
+
+        span
+            font-size: 1.3rem
+
+        h1
+            font-size: 3rem
+
+        h2
+            font-size: 1.8rem
+
+        p
+            font-size: 1.3rem
+
+    .social
+        a
+            width: 4rem
+            height: 4rem
+
+    .right
+        display: none
+
+@media ( max-width: 370px )
+    #home
+        display: flex
+        padding: 5rem 2rem 4rem 2rem
+
+        span
+            font-size: 1.1rem
+
+        h1
+            font-size: 3rem
+
+        h2
+            font-size: 1.7rem
+
+        p
+            font-size: 1rem
+    .social
+        a
+            width: 3rem
+            height: 3rem
+
+    .right
+        display: none
