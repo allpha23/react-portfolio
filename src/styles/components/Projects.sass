@@ -1,0 +1,56 @@
+@use '../variables'
+@use '../mixins'
+
+#projects
+    width: 100%
+    @include mixins.center
+    flex-direction: column
+    background-color: variables.$bg-color
+    padding: 6.5rem 5rem 4rem 5rem
+
+    h2
+        font-size: 3rem
+        font-weight: 700
+        margin-bottom: 20px
+
+.cardContainer
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+
+.showMore
+    display: flex
+    justify-content: center
+
+    button
+        color: variables.$text-color
+        cursor: pointer
+        border: 0
+        background-color: transparent
+        font-weight: bold
+        font-size: 1rem
+        letter-spacing: 2px
+
+    img
+        height: 2rem
+        width: 2rem
+        animation: show-more 2s infinite forwards
+
+@keyframes show-more
+    0%
+        opacity: 0
+        transform: translate3d(0, -15px, 0)
+
+    30%
+        opacity: 0
+
+    60%
+        opacity: 1
+
+    100%
+        opacity: 0
+        transform: translate3d(0, 10px, 0)
+
+@media ( max-width: 950px )
+    #projects
+        padding: 6.5rem 0 4rem 0
