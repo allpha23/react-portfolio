@@ -26,7 +26,7 @@ function Home() {
           <a href="../assets/img/Curriculo.pdf" download>
             <img src={navIcon2} alt="" />
           </a>
-          <a id="skills" href="https://github.com/allpha23" target="_blank" rel="noreferrer">
+          <a href="https://github.com/allpha23" target="_blank" rel="noreferrer">
             <img src={navIcon3} alt="" />
           </a>
         </div>
