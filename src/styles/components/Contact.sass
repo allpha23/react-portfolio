@@ -1,0 +1,101 @@
+@use '../variables'
+@use '../mixins'
+
+.contact
+    height: 100vh
+    width: 100%
+    display: grid
+    grid-template-columns: 1fr 1fr
+    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%)
+    padding: 5rem 5rem 3rem 5rem
+
+    h2
+        font-weight: 700
+        font-size: 2.5rem
+        letter-spacing: 0.8px
+        margin-bottom: 2rem
+
+.contactLogo
+    display: flex
+    align-items: center
+
+    img
+        width: 80%
+
+.form-container
+    display: flex
+    flex-direction: column
+
+    form
+        display: flex
+        flex-direction: column
+
+        input, textarea
+            background: rgba(255, 255, 255, 0.1)
+            border: 1px solid rgba(255, 255, 255, 0.5)
+            border-radius: 20px
+            margin-bottom: 14px
+            padding: 18px 26px
+            font-weight: 500
+            font-size: 1.1rem
+            letter-spacing: 0.8px
+            transition: 0.3s ease-in-out
+
+            &:focus
+                background: rgba(255, 255, 255, 1)
+                color: #121212
+                outline: 0
+
+                &::placeholder
+                    color: #121212
+                    opacity: 0.8
+
+            &::placeholder
+                font-size: 1rem
+                font-weight: 400
+                color: variables.$text-color
+
+.btnSubmit
+    button
+        font-weight: 700
+        color: #000
+        cursor: pointer
+        background-color: #fff
+        padding: 0.5rem 2rem
+        border: 0
+        font-size: 1rem
+        position: relative
+        letter-spacing: 0.8px
+        transition: 0.3s ease-in-out
+
+        &:hover
+            color: variables.$text-color
+            background-color: #000
+
+@include mixins.respond ( phone )
+    .contact
+        display: flex
+        padding: 5rem 2rem 3rem 2rem
+
+    .contactLogo
+        display: none
+
+    .form-container
+        width: 100%
+
+        form
+            input, textarea
+                margin-bottom: 2rem
+                font-size: 1.5rem
+
+                &::placeholder
+                    font-size: 1.5rem
+
+    .btnSubmit
+        button
+            padding: 1rem 3rem
+            font-size: 1.5rem
+
+@include mixins.respond ( phone-land )
+    .contact
+        height: 100%
