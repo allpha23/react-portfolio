@@ -9,8 +9,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
+    "@iconify/react": "^4.0.1",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-multi-carousel": "^2.8.2",
+    "react-toastify": "^9.1.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",
