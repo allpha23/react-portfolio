@@ -1,4 +1,5 @@
 @use '../variables'
+@use '../mixins'
 
 #home
     background-image: url("/src/assets/img/banner-bg.png")
@@ -10,7 +11,7 @@
 
     h1
         font-weight: 700
-        font-size: 4rem
+        font-size: 3.5rem
         letter-spacing: 0.8px
         line-height: 1
         margin-bottom: 1.25rem
@@ -18,13 +19,13 @@
 
     h2
         font-weight: 700
-        font-size: 2rem
+        font-size: 1.8rem
         letter-spacing: 0.8px
 
     p
         margin: 1.25rem 0
         color: variables.$text-color-secondary
-        font-size: 1.25rem
+        font-size: 1.2rem
         letter-spacing: 0.8px
         line-height: 1.5em
 
@@ -40,8 +41,8 @@
 
 .social
     a
-        width: 2.5rem
-        height: 2.5rem
+        width: 3rem
+        height: 3rem
         background: rgba(217, 217, 217, 0.1)
         display: inline-flex
         border-radius: 50%
@@ -59,8 +60,8 @@
 
         &::before
             content: ""
-            width: 2.5rem
-            height: 2.5rem
+            width: 3rem
+            height: 3rem
             position: absolute
             background-color: #ffffff
             border-radius: 50%
@@ -92,7 +93,7 @@
     100%
         transform: translateY(-20px)
 
-@media ( max-width: 950px )
+@include mixins.respond ( phone )
     #home
         display: flex
         padding: 5rem 2rem 4rem 2rem
@@ -117,26 +118,6 @@
     .right
         display: none
 
-@media ( max-width: 370px )
+@include mixins.respond ( phone-land )
     #home
-        display: flex
-        padding: 5rem 2rem 4rem 2rem
-
-        span
-            font-size: 1.1rem
-
-        h1
-            font-size: 3rem
-
-        h2
-            font-size: 1.7rem
-
-        p
-            font-size: 1rem
-    .social
-        a
-            width: 3rem
-            height: 3rem
-
-    .right
-        display: none
+        height: 100%
