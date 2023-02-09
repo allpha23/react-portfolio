@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
-import disableScroll from 'disable-scroll';
 import ProjectDetails from './ProjectDetail';
 
 import '../styles/components/ProjectCard.sass';
@@ -12,12 +11,12 @@ function ProjectCard({
 
   const showPopup = () => {
     setPopup(true);
-    disableScroll.on();
+    document.body.style.overflow = 'hidden';
   };
 
   const hidePopup = () => {
     setPopup(false);
-    disableScroll.off();
+    document.body.style.overflow = 'auto';
   };
 
   return (
