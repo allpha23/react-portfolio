@@ -1,0 +1,13 @@
+@mixin center
+    display: flex
+    justify-content: center
+    align-items: center
+
+@mixin respond ( $breakpoint )
+    @if $breakpoint == phone
+        @media ( max-width: 950px )
+            @content
+
+    @if $breakpoint == phone-land
+        @media ( max-height: 450px )
+            @content
