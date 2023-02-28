@@ -13,7 +13,7 @@ O site é composto por 4 seções:
 ## Layout web
 
 
-![Web 1](https://github.com/allpha23/assets/raw/main/trybewallet/web-login.png)
+![Web 1](https://github.com/allpha23/assets/raw/main/portfolio/portfolio-gif.gif)
 
 
 # Tecnologias utilizadas
