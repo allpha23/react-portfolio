@@ -4,9 +4,8 @@ https://allpha23.github.io/react-portfolio/
 # Sobre o projeto
 
 
-O site é composto por 4 seções:
+O site é composto por 3 seções:
   - **Home:** Nele temos uma breve apresentação;
-  - **Skills:** Mostra alguns conhecimentos por meio de um carrossel;
   - **Projetos:** Apresenta alguns projetos desenvolvidos com link para os respectivos códigos e deploy;
   - **Contatos:** Aqui você pode me enviar um email;
 
