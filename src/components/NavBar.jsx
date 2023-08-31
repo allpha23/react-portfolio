@@ -31,8 +31,8 @@ function NavBar() {
       </div>
       <ul>
         <li><a className={activeLink === 'home' ? 'active' : 'navbar'} href="#home" onClick={() => onActive('home')}>Home</a></li>
-        <li><a className={activeLink === 'skills' ? 'active' : 'navbar'} href="#skills" onClick={() => onActive('skills')}>Skills</a></li>
         <li><a className={activeLink === 'projects' ? 'active' : 'navbar'} href="#projects" onClick={() => onActive('projects')}>Projectos</a></li>
+        <li><a className={activeLink === 'contact' ? 'active' : 'navbar'} href="#contact" onClick={() => onActive('contact')}>Contato</a></li>
       </ul>
     </nav>
   );

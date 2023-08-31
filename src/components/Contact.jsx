@@ -20,7 +20,7 @@ function Contact() {
   };
 
   return (
-    <section className="contact">
+    <section id="contact" className="contact">
       <div className="contactLogo">
         <img src={contactImg} alt="" />
       </div>
